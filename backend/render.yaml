@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: wms-backend
+    env: java
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/warehouse-management-system-1.0.0.jar
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: DB_HOST
+        value: localhost
+      - key: DB_PORT
+        value: 5432
+      - key: DB_NAME
+        value: railway
+      - key: DB_USERNAME
+        value: postgres
+      - key: DB_PASSWORD
+        value: your_password
+      - key: MES_HOST
+        value: 127.0.0.1
+      - key: MES_PORT
+        value: 502
+      - key: STACKER_IP
+        value: 127.0.0.1
+      - key: STACKER_PORT
+        value: 503

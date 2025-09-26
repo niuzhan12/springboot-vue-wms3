@@ -1,0 +1,13 @@
+{
+  "name": "wms-backend",
+  "version": "1.0.0",
+  "description": "Warehouse Management System Backend",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Build completed'",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
